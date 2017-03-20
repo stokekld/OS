@@ -3,6 +3,9 @@ grub2
 aptitude
 xorg
 vim
+efibootmgr
+grub-efi-amd64
+dosfstools
 
 firmware-linux
 firmware-linux-free
