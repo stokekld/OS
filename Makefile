@@ -14,7 +14,7 @@ endif
 
 PACKAGES=$(shell sed -e '/^\#/d' -e '/^[\ \t]*$$/d' packages.conf | tr -s "\n" "," | sed '$$s/,$$//g')
 
-MIRROR=http://ftp.us.debian.org/debian
+MIRROR=http://ftp.us.debian.org/debian/
 
 .PHONY: build
 
