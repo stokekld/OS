@@ -13,7 +13,10 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plugin 'scrooloose/nerdtree'
+    autocmd vimenter * NERDTree
+    let g:NERDTreeWinPos = 'right'
+    map <C-n> :NERDTreeToggle<CR>
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tomasr/molokai'
 Plugin 'asciidoc/vim-asciidoc'
@@ -21,6 +24,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'mattn/emmet-vim'
 Plugin 'mxw/vim-jsx'
+    let g:jsx_ext_required = 0
 Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
@@ -49,9 +53,6 @@ set laststatus=2
 let g:molokai_original = 1
 colorscheme molokai
 
-"NEERDTree
-map <C-n> :NERDTreeToggle<CR>
-
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
@@ -59,9 +60,6 @@ nmap <leader>l :set list!<CR>
 "set listchars=tab:-▸,eol:¬
 set showbreak=↪\ 
 set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-
-"vim-jsx
-let g:jsx_ext_required = 0
 
 "auto indent
 map <F7> mzgg=G`z
